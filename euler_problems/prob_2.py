@@ -6,12 +6,21 @@ four million, find the sum of the even-valued terms.
 
 """
 
+
 result = 0
 
+class NoElementsBelowGivenParameter(Exception): pass
 def fibo(n):
     """Fibanocci sequence"""
     a, b = 0, 1
     li = []
+    
+    if not isinstance(n, int):
+        raise TypeError, "Parameter is not an integer."
+        
+        
+    if not n > 1: # Number requested is too low to return non-empty sequence
+        raise NoElementsBelowGivenParameter
 
     while b < n:
         a, b = b, a + b
