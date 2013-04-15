@@ -1,7 +1,7 @@
 import prob_2
 import unittest
 
-class Prob_1UnitTests(unittest.TestCase):
+class Prob_2UnitTests(unittest.TestCase):
     def test_integer_parameter(self):
         #fibo should only accept integer parameters
         self.assertRaises(TypeError, prob_2.fibo, "10")
