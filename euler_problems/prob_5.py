@@ -17,6 +17,13 @@ def greatcommondiv(x, y):
 
 
 def leastcomnfact(x, y):
+    
+    if not isinstance(x, int) or not isinstance(y, int):
+        raise TypeError, "Parameters must be integers"
+    
+    if x < 1:
+        raise ValueError, "parameters must be positive"
+    
     return y * x / greatcommondiv(x, y)
 
 ans = 2
