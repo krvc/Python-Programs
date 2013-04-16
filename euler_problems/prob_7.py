@@ -19,10 +19,11 @@ def isprime(n):
     # make sure n is a positive integer
     n = abs(int(n))
     
+    if n < 1 or n < 0:
+        raise ValueError, "Argument must be a positive integer"
+    
     if not isinstance(n, int):
         raise TypeError, "argument must be a positive integer"
-    if n < 1:
-        raise ValueError, "Argument must be a positive integer"
     
     # 0 and 1 are not primes
     if n < 2:
