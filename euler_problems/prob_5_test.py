@@ -1,7 +1,7 @@
 import unittest
 import prob_5
 
-class Prob_3UnitTests(unittest.TestCase): 
+class Prob_5UnitTests(unittest.TestCase): 
     def test_known_values(self):
         self.assertEqual(prob_5.leastcomnfact(1, 1), 1)
         self.assertEqual(prob_5.leastcomnfact(1, 2), 2)

@@ -18,6 +18,12 @@ def isprime(n):
     '''check if integer n is a prime'''
     # make sure n is a positive integer
     n = abs(int(n))
+    
+    if not isinstance(n, int):
+        raise TypeError, "argument must be a positive integer"
+    if n < 1:
+        raise ValueError, "Argument must be a positive integer"
+    
     # 0 and 1 are not primes
     if n < 2:
         return False
@@ -33,6 +39,8 @@ def isprime(n):
         if n % x == 0:
             return False
     return True
+    
+   
     
 while(True):
     if isprime(number):
