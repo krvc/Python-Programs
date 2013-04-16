@@ -9,10 +9,10 @@ What is the largest prime factor of the number 600851475143 ?
 
 def prim_fact(n):
     "Returns all the prime factors of a positive integer"
-    if not isinstance(n, int):
-        raise TypeError, "Only integers are acceptable for primeFactors(n)"
+    
     if n < 1:
         raise ValueError, "Parameter must be at least 1."
+    
     factors = []
     d = 2
     while (n > 1):
@@ -24,6 +24,6 @@ def prim_fact(n):
     return factors
 
 
-pf = prim_fact(600851475143)
+pf = prim_fact(600851475143) 
 largest_prime_factor = pf[-1]
 print largest_prime_factor
